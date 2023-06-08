@@ -1,0 +1,91 @@
+.portfolio-project {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-gap: 2.4rem;
+  align-items: flex-end;
+  justify-items: center;
+  text-align: right;
+  position: relative;
+
+  &__img {
+    width: 100%;
+    height: 60rem;
+    margin-bottom: 1.8rem;
+    overflow: hidden;
+    background-color: red;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover {
+      transform: scale(0.95) !important;
+      cursor: none;
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
+  h2 {
+    position: relative;
+    // display: table-caption;
+    font-size: 5.2rem;
+    font-weight: bold;
+    margin-bottom: 1.8rem;
+  }
+
+  p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #979797;
+    margin-bottom: 1.8rem;
+  }
+
+  .tech-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    margin-bottom: 1.8rem;
+    font-size: 1.4rem;
+    list-style: none;
+  }
+
+  .pg-btns {
+    margin-top: 10.8rem;
+  }
+
+  &__content::before {
+    font-family: 'Plat Nomor', sans-serif;
+
+    position: absolute;
+    // top: 50%;
+    // left: 50%;
+    right: 0;
+
+    // transform: translateY(-100%);
+    font-size: 24rem;
+    font-weight: 900;
+    color: #0c4a6e4d;
+    line-height: 1;
+    z-index: -1;
+
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: url(../../assets/gold2.webp);
+  }
+}
+
+.portfolio-project:nth-child(2n) {
+  text-align: left;
+  grid-template-columns: 2fr 3fr;
+  .portfolio-project__img {
+    order: 2;
+    height: 60rem;
+  }
+
+  .portfolio-project__content::before {
+    left: 0;
+  }
+}
