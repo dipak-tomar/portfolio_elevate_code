@@ -1,10 +1,10 @@
-import logo from '../../assets/logo.svg';
-import './Nav.scss';
-import { useEffect, useRef, useState } from 'react';
+import logo from "../../assets/logo.svg";
+import "./Nav.scss";
+import { useEffect, useRef, useState } from "react";
 
-import { useLocation } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 
-import gsap from 'gsap';
+import gsap from "gsap";
 import {
   IoLogoGithub,
   IoLogoTwitter,
@@ -12,13 +12,13 @@ import {
   IoLogoLinkedin,
   IoLogoSlack,
   IoLogoSkype,
-} from 'react-icons/io5';
-import { Link } from 'react-scroll';
+} from "react-icons/io5";
+import { Link } from "react-scroll";
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(
-    window.matchMedia('(max-width: 768px)').matches
+    window.matchMedia("(max-width: 768px)").matches
   );
   const [active, setActive] = useState(false);
   const [activeLink, setActiveLink] = useState(false);
@@ -35,7 +35,7 @@ const Nav = () => {
   const navTl = useRef(null);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 968px)');
+    const mediaQuery = window.matchMedia("(max-width: 968px)");
     mediaQuery.addListener(handleMediaQueryChange);
     handleMediaQueryChange(mediaQuery);
 
@@ -57,70 +57,70 @@ const Nav = () => {
       paused: true,
     });
 
-    navTl.current.to('.nav-list', {
-      display: 'flex',
+    navTl.current.to(".nav-list", {
+      display: "flex",
     });
 
     navTl.current.to(shapeRef1.current, {
-      width: '25vw',
+      width: "25vw",
       opacity: 1,
     });
     navTl.current.to(
       shapeRef2.current,
       {
-        width: '25vw',
+        width: "25vw",
         opacity: 1,
       },
-      '<0%'
+      "<0%"
     );
     navTl.current.to(
       shapeRef3.current,
       {
-        width: '25vw',
+        width: "25vw",
         opacity: 1,
       },
-      '<0%'
+      "<0%"
     );
     navTl.current.to(
       shapeRef4.current,
       {
-        width: '25vw',
+        width: "25vw",
         opacity: 1,
       },
-      '<0%'
+      "<0%"
     );
 
     navTl.current.to(
-      '#link-1',
+      "#link-1",
       {
         x: 0,
         opacity: 1,
       },
-      '<100%'
+      "<100%"
     );
     navTl.current.to(
-      '#link-2',
+      "#link-2",
       {
         x: 0,
         opacity: 1,
       },
-      '<25%'
+      "<25%"
     );
     navTl.current.to(
-      '#link-3',
+      "#link-3",
       {
         x: 0,
         opacity: 1,
       },
-      '<25%'
+      "<25%"
     );
     navTl.current.to(
-      '#link-4',
+      "#link-4",
       {
         x: 0,
         opacity: 1,
       },
-      '<25%'
+      "<25%"
     );
   }, []);
 
@@ -137,7 +137,7 @@ const Nav = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname.includes('project')) {
+    if (location.pathname.includes("project")) {
       setActiveLink(true);
     } else {
       setActiveLink(false);
@@ -147,28 +147,28 @@ const Nav = () => {
   return (
     <>
       {activeLink ? (
-        <div className='nav'>
-          <div className='nav-icons'>
+        <div className="nav">
+          <div className="nav-icons">
             <a
-              href='https://github.com/Rustamxon7'
-              target='_blank'
-              rel='noreferrer'
+              href="https://github.com/dipak-tomar"
+              target="_blank"
+              rel="noreferrer"
             >
-              <IoLogoGithub className='nav-icon' />
+              <IoLogoGithub className="nav-icon" />
             </a>
             <a
-              href='https://www.linkedin.com/in/rustam-tolipov'
-              target='_blank'
-              rel='noreferrer'
+              href="https://www.linkedin.com/in/dipak-kumar-tomar-50a568239/"
+              target="_blank"
+              rel="noreferrer"
             >
-              <IoLogoLinkedin className='nav-icon' />
+              <IoLogoLinkedin className="nav-icon" />
             </a>
             <a
-              href='https://join.skype.com/invite/EocMg9sn1jjC'
-              target='_blank'
-              rel='noreferrer'
+              href="https://join.skype.com/invite/u1bIfZSvjc20"
+              target="_blank"
+              rel="noreferrer"
             >
-              <IoLogoSkype className='nav-icon' />
+              <IoLogoSkype className="nav-icon" />
             </a>
           </div>
         </div>
@@ -176,32 +176,32 @@ const Nav = () => {
         <>
           {isMobile ? (
             <>
-              <div className='nav'>
-                <div className='nav-icons'>
+              <div className="nav">
+                <div className="nav-icons">
                   <a
-                    href='https://github.com/Rustamxon7'
-                    target='_blank'
-                    rel='noreferrer'
+                    href="https://github.com/dipak-tomar"
+                    target="_blank"
+                    rel="noreferrer"
                   >
-                    <IoLogoGithub className='nav-icon' />
+                    <IoLogoGithub className="nav-icon" />
                   </a>
                   <a
-                    href='https://www.linkedin.com/in/rustam-tolipov'
-                    target='_blank'
-                    rel='noreferrer'
+                    href="https://www.linkedin.com/in/dipak-kumar-tomar-50a568239/"
+                    target="_blank"
+                    rel="noreferrer"
                   >
-                    <IoLogoLinkedin className='nav-icon' />
+                    <IoLogoLinkedin className="nav-icon" />
                   </a>
                   <a
-                    href='https://join.skype.com/invite/EocMg9sn1jjC'
-                    target='_blank'
-                    rel='noreferrer'
+                    href="https://join.skype.com/invite/u1bIfZSvjc20"
+                    target="_blank"
+                    rel="noreferrer"
                   >
-                    <IoLogoSkype className='nav-icon' />
+                    <IoLogoSkype className="nav-icon" />
                   </a>
                 </div>
 
-                <p className='nav-btn'>
+                <p className="nav-btn">
                   {open ? (
                     <span
                       onClick={() => {
@@ -213,7 +213,7 @@ const Nav = () => {
                     </span>
                   ) : (
                     <span
-                      className='nav__btn'
+                      className="nav__btn"
                       onClick={() => {
                         navTl.current.play();
                         setOpen((_open) => true);
@@ -224,110 +224,110 @@ const Nav = () => {
                   )}
                 </p>
 
-                <div ref={shapeRef1} className='nav__shape nav__shape-1'></div>
-                <div ref={shapeRef2} className='nav__shape nav__shape-2'></div>
-                <div ref={shapeRef3} className='nav__shape nav__shape-3'></div>
-                <div ref={shapeRef4} className='nav__shape nav__shape-4'></div>
+                <div ref={shapeRef1} className="nav__shape nav__shape-1"></div>
+                <div ref={shapeRef2} className="nav__shape nav__shape-2"></div>
+                <div ref={shapeRef3} className="nav__shape nav__shape-3"></div>
+                <div ref={shapeRef4} className="nav__shape nav__shape-4"></div>
               </div>
-              <ul className='nav-list'>
-                <li id='link-1'>
-                  <a className='nav-link' href='#home' onClick={handleOpen}>
+              <ul className="nav-list">
+                <li id="link-1">
+                  <a className="nav-link" href="#home" onClick={handleOpen}>
                     Home
                   </a>
                 </li>
-                <li id='link-2'>
-                  <a className='nav-link' href='#about' onClick={handleOpen}>
+                <li id="link-2">
+                  <a className="nav-link" href="#about" onClick={handleOpen}>
                     About
-                  </a>{' '}
+                  </a>{" "}
                 </li>
-                <li id='link-3'>
-                  <a className='nav-link' href='#projects' onClick={handleOpen}>
+                <li id="link-3">
+                  <a className="nav-link" href="#projects" onClick={handleOpen}>
                     Portfolio
-                  </a>{' '}
+                  </a>{" "}
                 </li>
-                <li id='link-4'>
-                  <a className='nav-link' href='#contact' onClick={handleOpen}>
+                <li id="link-4">
+                  <a className="nav-link" href="#contact" onClick={handleOpen}>
                     Contact
-                  </a>{' '}
+                  </a>{" "}
                 </li>
               </ul>
             </>
           ) : (
-            <div className='nav'>
+            <div className="nav">
               {/* R.T */}
-              <div className='nav-icons'>
+              <div className="nav-icons">
                 <a
-                  href='https://github.com/Rustamxon7'
-                  target='_blank'
-                  rel='noreferrer'
+                  href="https://github.com/dipak-tomar"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  <IoLogoGithub className='nav-icon' />
+                  <IoLogoGithub className="nav-icon" />
                 </a>
                 <a
-                  href='https://www.linkedin.com/in/rustam-tolipov'
-                  target='_blank'
-                  rel='noreferrer'
+                  href="https://www.linkedin.com/in/dipak-kumar-tomar-50a568239/"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  <IoLogoLinkedin className='nav-icon' />
+                  <IoLogoLinkedin className="nav-icon" />
                 </a>
                 <a
-                  href='https://join.skype.com/invite/EocMg9sn1jjC'
-                  target='_blank'
-                  rel='noreferrer'
+                  href="https://join.skype.com/invite/u1bIfZSvjc20"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  <IoLogoSkype className='nav-icon' />
+                  <IoLogoSkype className="nav-icon" />
                 </a>
               </div>
 
-              <ul className='nav-main-list'>
+              <ul className="nav-main-list">
                 <li>
                   <Link
-                    activeClass='active'
-                    to='home'
+                    activeClass="active"
+                    to="home"
                     spy={true}
                     smooth={true}
                     offset={-70}
                     duration={500}
-                    className={active ? 'nav-btn active' : 'nav-btn'}
+                    className={active ? "nav-btn active" : "nav-btn"}
                   >
                     Home
                   </Link>
                 </li>
                 <li>
                   <Link
-                    activeClass='active'
-                    to='projects'
+                    activeClass="active"
+                    to="projects"
                     spy={true}
                     smooth={true}
                     offset={-70}
                     duration={500}
-                    className='nav-btn'
+                    className="nav-btn"
                   >
                     Portfolio
                   </Link>
                 </li>
                 <li>
                   <Link
-                    activeClass='active'
-                    to='about'
+                    activeClass="active"
+                    to="about"
                     spy={true}
                     smooth={true}
                     offset={-70}
                     duration={500}
-                    className='nav-btn'
+                    className="nav-btn"
                   >
                     About
                   </Link>
                 </li>
                 <li>
                   <Link
-                    activeClass='active'
-                    to='contact'
+                    activeClass="active"
+                    to="contact"
                     spy={true}
                     smooth={true}
                     offset={-70}
                     duration={500}
-                    className='nav-btn'
+                    className="nav-btn"
                   >
                     Contact
                   </Link>
