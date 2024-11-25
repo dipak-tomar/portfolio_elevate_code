@@ -2,7 +2,7 @@ import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 
 import "./Hero.scss";
-import heroImg from "../../assets/hero.png";
+import heroImg from "../../assets/portfolio_image.webp";
 
 const Hero = () => {
   // refs

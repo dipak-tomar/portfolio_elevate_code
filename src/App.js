@@ -16,21 +16,21 @@ const Portfolio = React.lazy(() => import('./components/Portfolio/Portfolio'));
 const Hero = React.lazy(() => import('./components/Hero/Hero'));
 const Contact = React.lazy(() => import('./components/Contact/Contact'));
 
-const TRACKING_ID = 'G-GVQFS13LTK'; // OUR_TRACKING_ID
-ReactGA.initialize(TRACKING_ID);
+// const TRACKING_ID = 'G-GVQFS13LTK'; // OUR_TRACKING_ID
+// ReactGA.initialize(TRACKING_ID);
 
 function App() {
-  const pageView = () => {
-    // every time scroll is called, page view is called
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  };
+  // const pageView = () => {
+  //   // every time scroll is called, page view is called
+  //   // ReactGA.pageview(window.location.pathname + window.location.search);
+  // };
 
-  useEffect(() => {
-    window.addEventListener('scroll', pageView);
-    return () => {
-      window.removeEventListener('scroll', pageView);
-    };
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener('scroll', pageView);
+  //   return () => {
+  //     window.removeEventListener('scroll', pageView);
+  //   };
+  // }, []);
 
   useEffect(() => {
     const tl = gsap.timeline({});

@@ -1,15 +1,39 @@
 .section-about {
   margin-bottom: 10rem;
   overflow: hidden;
-}
 
-.about {
-  height: 100vh;
-
-  &-content {
+  .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10rem;
-    margin-bottom: 10rem;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+      gap: 10rem;
+    }
+  }
+
+  .about-text {
+    font-size: 1.125rem; // Equivalent to Tailwind's text-lg
+    line-height: 1.75rem; // Equivalent to leading-relaxed
+    color: #d1d5db; // Gray-400
+  }
+
+  .accordion {
+    border-bottom: 1px solid #4b5563; // Gray-700
+
+    .accordion-title {
+      font-size: 1.25rem; // Tailwind's text-xl
+      font-weight: 600; // Tailwind's font-semibold
+    }
+
+    .accordion-content {
+      font-size: 1rem; // Tailwind's text-base
+      color: #9ca3af; // Tailwind's text-gray-400
+    }
+  }
+
+  .marquee {
+    margin-top: 4rem;
   }
 }

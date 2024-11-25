@@ -1,58 +1,73 @@
+import { FaCode, FaDatabase, FaPencilRuler } from 'react-icons/fa'; // Import icons from react-icons
 import Marquee from '../Portfolio/Marquee';
-import Accordion from '../UI/Accordion';
-import Heading from '../UI/Heading';
-import P from '../UI/P';
-
-import './About.scss';
-
-const accordionData = [
-  {
-    id: 1,
-    title: 'Frontend',
-    content:
-      'Experienced in developing responsive web applications using HTML & CSS, SCSS, JavaScript, React & Redux, Three Js, and React Three Fiber. Continuously learning and striving to create user-friendly and visually appealing websites.',
-  },
-  {
-    id: 2,
-    title: 'Backend',
-    content:
-      'Skilled in database design and API development using technologies such as MySQL, Ruby on Rails, Node.js, and Git. Continuously learning and improving to deliver effective solutions.',
-  },
-  {
-    id: 3,
-    title: 'Design',
-    content:
-      'I have a keen interest in developing user interfaces and user experiences on Figma, as well as creating 3D models and satisfying visual content on Blender. I enjoy the challenge of combining aesthetics and function to create results which exceed expectations.',
-  },
-];
 
 const About = () => {
   return (
-    <div className='section-about' id='about'>
-      <Heading>About Me</Heading>
-      <div className='about-content'>
-        <div className='about-text'>
-          <P>
-            I am an enthusiastic Full-Stack Web Developer passionate about
-            learning languages. Mentoring 4+ students who are aspiring
-            to become web developers in the future, I am actively seeking
-            employment to join a flourishing team.
-          </P>
+    <section
+      id="about"
+      className="bg-black text-white py-28 px-10 md:px-20 lg:px-40 relative"
+    >
+      {/* Background Accent */}
+      <div className="absolute inset-0 -z-10 opacity-10 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
+
+      {/* Container */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24">
+        {/* Left Side: Introduction */}
+        <div className="space-y-12">
+          <h2 className="text-7xl font-extrabold">About Me</h2>
+          <p className="text-2xl text-gray-300 leading-relaxed">
+            I am an enthusiastic <span className="text-white font-bold">Full-Stack Web Developer</span> 
+            passionate about learning and teaching. I have mentored <span className="text-white font-bold">4+ students</span> 
+            aspiring to become web developers and am always eager to contribute to a <span className="text-white font-bold">dynamic team</span>. 
+            My goal is to create efficient and user-friendly applications that solve real-world problems.
+          </p>
+          <p className="text-2xl text-gray-300 leading-relaxed">
+            Beyond coding, I enjoy exploring new technologies, experimenting with design, and mentoring aspiring developers. I believe in continuous learning and collaboration as the foundation for professional growth.
+          </p>
         </div>
 
-        <div>
-          {accordionData.map((item, index) => (
-            <Accordion
-              key={index}
-              id={item.id}
-              title={item.title}
-              content={item.content}
-            />
-          ))}
+        {/* Right Side: Skills Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14">
+          {/* Frontend */}
+          <div className="text-center">
+            <div className="flex items-center justify-center bg-blue-500 rounded-full w-28 h-28 mx-auto">
+              <FaCode className="text-white text-6xl" />
+            </div>
+            <h3 className="text-3xl font-extrabold mt-8">Frontend</h3>
+            <p className="text-gray-300 text-xl mt-6 leading-relaxed">
+              Expertise in React, Redux, SCSS, and building user-friendly, responsive web interfaces.
+            </p>
+          </div>
+
+          {/* Backend */}
+          <div className="text-center">
+            <div className="flex items-center justify-center bg-green-500 rounded-full w-28 h-28 mx-auto">
+              <FaDatabase className="text-white text-6xl" />
+            </div>
+            <h3 className="text-3xl font-extrabold mt-8">Backend</h3>
+            <p className="text-gray-300 text-xl mt-6 leading-relaxed">
+              Skilled in Node.js, Ruby on Rails, MySQL, and creating scalable APIs.
+            </p>
+          </div>
+
+          {/* Design */}
+          <div className="text-center">
+            <div className="flex items-center justify-center bg-purple-500 rounded-full w-28 h-28 mx-auto">
+              <FaPencilRuler className="text-white text-6xl" />
+            </div>
+            <h3 className="text-3xl font-extrabold mt-8">Design</h3>
+            <p className="text-gray-300 text-xl mt-6 leading-relaxed">
+              Proficient in Figma, Blender, and crafting stunning visual designs and 3D models.
+            </p>
+          </div>
         </div>
       </div>
-      <Marquee />
-    </div>
+
+      {/* Marquee Section */}
+      <div className="mt-24">
+        <Marquee />
+      </div>
+    </section>
   );
 };
 
